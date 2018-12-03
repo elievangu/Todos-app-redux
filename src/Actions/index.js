@@ -1,17 +1,27 @@
-//npm import
-import React from 'react';
-import ReactDOM from 'react-dom';
-
-//local import
-import App from '../Components/App';
-
-const TodoApp = () => {
-    return (
-        <App />
-    )
+export const addTodo = (text) => {
+    return {
+        type: 'ADD_TODO',
+        text
+    }
 }
 
-ReactDOM.render(
-    <TodoApp />,
-    document.getElementById('root')
-)
+export const toggleTodo = (id) => {
+    return {
+        type: 'TOGGLE_TODO',
+        id
+    }
+}
+
+export const trashTodo = (id) => {
+    return {
+        type: 'TRASH_TODO',
+        id
+    }
+}
+
+export const filterTodos = (isFiltered) => {
+    return {
+        type: 'FILTER_TODOS',
+        isFiltered
+    }
+}
