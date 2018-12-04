@@ -7,7 +7,7 @@ import addTodo from '../Actions/index';
 
 const mapDispatchToProps = (dispatch) => {
     return {
-      handleFilterChange: (e) => {
+      handleSubmit: (e) => {
           dispatch(addTodo(e))
       }
     }
