@@ -6,7 +6,9 @@ import React from 'react';
 const FilterTodos = ({isFiltered, handleFilterChange}) => {
     return (
       <label>
-        <input type='checkbox' checked={isFiltered} onChange={handleFilterChange}/>
+        <input type='checkbox' 
+        checked={isFiltered} 
+        onChange={handleFilterChange}/>
         <span>Show only completed Todos</span>
       </label>
     )

@@ -8,9 +8,9 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 
 library.add(faCheck);
 
-const ToggleButton = ({ toggleTodo }) => {
+const ToggleButton = ({ handleToggle }) => {
   return (
-    <td className='icon toggle'><button onClick={toggleTodo}><FontAwesomeIcon icon='check' size='3x'/></button></td>
+    <td className='icon toggle'><button onClick={handleToggle}><FontAwesomeIcon icon='check' size='3x'/></button></td>
   )
 }
 
