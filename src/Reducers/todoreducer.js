@@ -4,7 +4,7 @@ const initialState = [
     {id:3, text:'Aprrendre NodeJS', completed:false}
 ]
 
-const todoreducer = (state = initialState, action) {
+const todoreducer = (state = initialState, action) => {
     switch(action.type) {
         case 'ADD_TODO':
           return [
@@ -14,15 +14,16 @@ const todoreducer = (state = initialState, action) {
                   completed: false
               }
           ]
+
         case 'TOGGLE_TODO':
-          return state.map(todo => ({
+          return state.map(todo => 
             todo.id === action.id ? {...todo, completed:!todo.completed} : todo  
-          }))
+          )
         
         case 'TRASH_TODO':
-          return state.filter(todo => {
+          return state.filter(todo => 
               todo.id !== action.id
-            })
+            )
         
         default:
           return state
