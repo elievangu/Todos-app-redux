@@ -1,6 +1,9 @@
+let newId = 2
+
 export const addTodo = (text) => {
     return {
         type: 'ADD_TODO',
+        id: newId++,
         text
     }
 }
