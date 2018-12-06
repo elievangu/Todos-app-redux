@@ -4,7 +4,7 @@ const initialState = [
     {id:3, text:'Aprrendre NodeJS', completed:false}
 ]
 
-const todoreducer = (state = initialState, action) => {
+const todoReducer = (state = initialState, action) => {
     switch(action.type) {
         case 'ADD_TODO':
           return [
@@ -30,4 +30,4 @@ const todoreducer = (state = initialState, action) => {
     }
 }
 
-export default todoreducer;
+export default todoReducer;

@@ -1,11 +1,11 @@
 //npm import
-import React from 'react'
+import React from 'react';
 
 //local import
 
-const ItemTodo = ({ toggleTodo }) => {
+const ItemTodo = ({ text, completed, toggleTodo }) => {
   return (
-    <td class='text' onClick={toggleTodo}>Test</td>
+    <td class={completed ? 'text completed' : 'text ongoing'} onClick={toggleTodo}>{text}</td>
   )
 }
 
