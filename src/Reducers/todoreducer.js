@@ -1,7 +1,7 @@
 const initialState = [
     {id:1, text:'Apprendre ReactJS', completed:false},
     {id:2, text:'Apprendre Angular', completed:false},
-    {id:3, text:'Aprrendre NodeJS', completed:false}
+    {id:3, text:'Apprendre NodeJS', completed:false}
 ]
 
 const todoReducer = (state = initialState, action) => {

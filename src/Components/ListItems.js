@@ -19,8 +19,8 @@ const ListItems = ({ onHandleToggle, onHandleTrash }) => {
         key={id} 
         {...todo} 
         onClick={() => onHandleToggle(id)} />
-      <ToggleButton onClick={() => onHandleToggle(id)} />
-      <TrashButton onClick={() => onHandleTrash(id)} />
+      <ToggleButton {...todo} onClick={() => onHandleToggle(id)} />
+      <TrashButton {...todo} onClick={() => onHandleTrash(id)} />
     </tr>);
 
   return (
