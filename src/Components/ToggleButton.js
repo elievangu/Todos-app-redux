@@ -4,11 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
+
 //local import
 
 library.add(faCheck);
 
-const ToggleButton = ({ handleToggle }) => {
+const ToggleButton = ({ handleToggle, id }) => {
   return (
     <td className='icon toggle'><button onClick={handleToggle}><FontAwesomeIcon icon='check' size='3x'/></button></td>
   )

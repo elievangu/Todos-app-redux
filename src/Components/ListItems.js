@@ -6,13 +6,8 @@ import ItemTodo from '../Components/ItemTodo';
 import ToggleButton from '../Components/ToggleButton';
 import TrashButton from '../Components/TrashButton'
 
-const ListItems = ({ onHandleToggle, onHandleTrash }) => {
+const ListItems = ({ onHandleToggle, onHandleTrash, todos }) => {
   
-  const todos = [
-    {id:1, text:'Apprendre ReactJS', completed:true},
-    {id:2, text:'Apprendre Angular', completed:false},
-    {id:3, text:'Aprrendre NodeJS', completed:false}
-];
   const todosList = todos.map((todo, id) => 
     <tr>
       <ItemTodo 

@@ -2,9 +2,9 @@
 import React from 'react';
 
 //Local import
-import ListItems from '../Components/ListItems';
-import InputTodo from '../Components/InputTodo';
-import FilterTodos from '../Components/FilterTodos';
+import VisibleTodosList from '../Containers/VisibleTodosList';
+import TodoInput from '../Containers/TodoInput';
+import TodosFilter from '../Containers/TodosFilter';
 
 const App = () => {
   
@@ -16,10 +16,10 @@ const App = () => {
             <th>Todos App</th>
           </tr>
         </thead>
-        <ListItems />
+        <VisibleTodosList />
       </table>
-      <InputTodo />
-      <FilterTodos />
+      <TodoInput />
+      <TodosFilter />
     </div>
   );
 }
