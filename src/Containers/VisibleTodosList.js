@@ -6,7 +6,7 @@ import { toggleTodo } from '../Actions/index';
 import ListItems from '../Components/ListItems';
 
 
-/*const getVisibleTodos = (todos, isFiltered) => {
+const getVisibleTodos = (todos, isFiltered) => {
   switch(isFiltered) {
     case true:
       return todos.filter(todo => todo.completed)
@@ -17,11 +17,11 @@ import ListItems from '../Components/ListItems';
     default:
       return todos
   }
-};*/
+};
 
 const mapStateToProps = (state) => {
   return {
-    todos: state
+    todos: getVisibleTodos(state.todos, state.isFiltered)
   }
 };
 
