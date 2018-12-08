@@ -3,7 +3,7 @@ import { combineReducers } from 'redux';
 
 //local import
 import filterReducer from './filterReducer';
-import todos from './todoReducer';
+import todos from './todoreducer';
 
 const reducers = combineReducers({
     filterReducer,
