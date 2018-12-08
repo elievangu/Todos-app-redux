@@ -8,7 +8,7 @@ const FilterTodos = ({isFiltered, handleFilterChange}) => {
       <label>
         <input type='checkbox' 
         checked={isFiltered} 
-        onChange={handleFilterChange}/>
+        onChange={(e) => handleFilterChange(e)} />
         <span>Show only completed Todos</span>
       </label>
     )

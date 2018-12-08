@@ -17,7 +17,7 @@ const TodoApp = () => {
 
     <Provider store={store}>
       <App />
-    </Provider>
+    </ Provider>
   )
 }
 

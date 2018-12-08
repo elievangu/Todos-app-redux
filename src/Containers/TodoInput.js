@@ -7,20 +7,16 @@ import { addTodo } from '../Actions/index';
 
 const mapDispatchToProps = (dispatch) => {
     return {
-      handleSubmit: (e) => {
-          dispatch(addTodo(e.target.value))
+      handleSubmit: (text) => {
+          dispatch(addTodo(text))
       }
     }
 };
 
-const mapStateToProps = (state) => {
-  return {
-      value: state.value
-  }
-};
+
 
 const TodoInput = connect(
-    mapStateToProps,
+    null,
     mapDispatchToProps
 )(InputTodo);
 

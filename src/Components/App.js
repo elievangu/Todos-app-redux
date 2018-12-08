@@ -18,8 +18,10 @@ const App = () => {
         </thead>
         <VisibleTodosList />
       </table>
-      <TodoInput />
-      <TodosFilter />
+      <div>
+        <TodoInput />
+        <TodosFilter />
+      </div>
     </div>
   );
 }

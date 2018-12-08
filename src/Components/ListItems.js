@@ -3,19 +3,19 @@ import React from 'react';
 
 //local import
 import ItemTodo from '../Components/ItemTodo';
-import ToggleButton from '../Components/ToggleButton';
-import TrashButton from '../Components/TrashButton'
+import ButtonToggle from '../Containers/ButtonToggle';
+import ButtonTrash from '../Containers/ButtonTrash'
 
 const ListItems = ({ onHandleToggle, onHandleTrash, todos }) => {
   
-  const todosList = todos.map((todo, id) => 
+  const todosList = todos.map(todo => 
     <tr>
       <ItemTodo 
-        key={id} 
+        key={todo.id} 
         {...todo} 
-        onClick={() => onHandleToggle(id)} />
-      <ToggleButton onClick={() => onHandleToggle(id)} />
-      <TrashButton onClick={() => onHandleTrash(id)} />
+        onClick={() => onHandleToggle(todo.id)} />
+      <ButtonToggle onClick={() => onHandleToggle(todo.id)} />
+      <ButtonTrash onClick={() => onHandleTrash(todo.id)} />
     </tr>);
 
   return (

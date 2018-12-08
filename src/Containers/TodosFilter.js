@@ -15,7 +15,7 @@ const mapDispatchToprops = (dispatch) => {
 
 const mapStateToProps = (state) => {
     return {
-        isFiltered: state.value
+        isFiltered: state
     }
 }
 

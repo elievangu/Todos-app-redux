@@ -5,13 +5,13 @@ import React from 'react';
 
 const InputTodo = ({ value, handleChange, handleSubmit }) => {
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={e => handleSubmit(e)}>
           <input
             id='input'
             type='text' 
             placeholder='Enter your new todo here...' 
             value={value} 
-            onChange={handleChange}/>
+            onChange={e => handleChange(e)}/>
         </form>
     )
 }

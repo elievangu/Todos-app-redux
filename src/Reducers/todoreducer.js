@@ -23,7 +23,7 @@ const todoReducer = (state = initialState, action) => {
         case 'TRASH_TODO':
           return state.filter(todo => 
               todo.id !== action.id
-            )
+          )
         
         default:
           return state

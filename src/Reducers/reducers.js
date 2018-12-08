@@ -5,8 +5,8 @@ import { combineReducers } from 'redux';
 import filterReducer from './filterReducer';
 import todoReducer from './todoReducer';
 
-const reducers = combineReducers(
+const reducers = combineReducers({
     filterReducer,
-    todoReducer);
+    todoReducer});
 
 export default reducers;
