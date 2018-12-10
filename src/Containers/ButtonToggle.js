@@ -7,7 +7,7 @@ import { toggleTodo } from '../Actions/index';
 
 const mapDispatchToProps = (dispatch) => {
     return {
-      handleToggle: (id) => {
+      onHandleToggle: (id) => {
           dispatch(toggleTodo(id))
       }
     }

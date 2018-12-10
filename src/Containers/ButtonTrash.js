@@ -7,7 +7,7 @@ import { trashTodo } from '../Actions/index';
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        handleTrash: (id) => {
+        onHandleTrash: (id) => {
           dispatch(trashTodo(id))
         }
     }

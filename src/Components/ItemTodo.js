@@ -5,7 +5,7 @@ import React from 'react';
 
 const ItemTodo = ({ text, completed, handleToggle }) => {
   return (
-    <td class={completed ? 'text completed' : 'text ongoing'} onClick={handleToggle}>{text}</td>
+    <td className={completed ? 'text completed' : 'text ongoing'} onClick={handleToggle}>{text}</td>
   )
 }
 

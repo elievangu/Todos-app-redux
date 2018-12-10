@@ -11,11 +11,11 @@ const ListItems = ({ todos, onHandleToggle, onHandleTrash }) => {
   const todosList = todos.map(todo => 
     <tr>
       <ItemTodo 
-        key={todo.id} 
+        key={`Item ${todo.id}`} 
         {...todo} 
-        onClick={onHandleToggle} />
-      <ButtonToggle onClick={onHandleToggle} />
-      <ButtonTrash onClick={onHandleTrash} />
+        handleToggle={() => onHandleToggle(todo.id)} />
+      <ButtonToggle key={`Toggle ${todo.id}`} handleToggle={() => onHandleToggle(todo.id)} />
+      <ButtonTrash key={`Trash ${todo.id}`} handleTrash={() => onHandleTrash(todo.id)} />
     </tr>);
 
   return (
