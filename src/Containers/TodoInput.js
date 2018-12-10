@@ -11,6 +11,7 @@ const mapDispatchToProps = (dispatch) => {
       handleSubmit: (e, input) => {
           e.preventDefault()
           dispatch(addTodo(input.value))
+          input.value =''
       }
     }
 };
