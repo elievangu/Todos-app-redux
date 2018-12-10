@@ -3,15 +3,15 @@ import React from 'react';
 
 //local import
 
-const InputTodo = ({ value, handleChange, handleSubmit }) => {
+const InputTodo = ({ input, handleSubmit }) => {
+
     return (
-        <form onSubmit={e => handleSubmit(e)}>
+        <form onSubmit={e => handleSubmit(e, input)}>
           <input
             id='input'
             type='text' 
-            placeholder='Enter your new todo here...' 
-            value={value} 
-            onChange={e => handleChange(e)}/>
+            placeholder='Enter your new todo here...'
+            ref={node => (input = node)} />
         </form>
     )
 }

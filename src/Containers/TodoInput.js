@@ -6,9 +6,11 @@ import InputTodo from '../Components/InputTodo';
 import { addTodo } from '../Actions/index';
 
 const mapDispatchToProps = (dispatch) => {
+    
     return {
-      handleSubmit: (text) => {
-          dispatch(addTodo(text))
+      handleSubmit: (e, input) => {
+          e.preventDefault()
+          dispatch(addTodo(input.value))
       }
     }
 };

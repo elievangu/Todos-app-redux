@@ -22,7 +22,7 @@ const todos = (state = initialState, action) => {
         
         case 'TRASH_TODO':
           return state.filter(todo => 
-              todo.id !== action.id
+              todo.text !== action.id
           )
         
         default:
