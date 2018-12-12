@@ -8,9 +8,9 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 
 library.add(faTrashAlt);
 
-const TrashButton = ({ handleTrash }) => {
+const TrashButton = ({ handleDelete }) => {
   return (
-    <td className='icon'><button onClick={handleTrash}><FontAwesomeIcon icon='trash-alt' size='3x'/></button></td>
+    <td className='icon'><button onClick={handleDelete}><FontAwesomeIcon icon='trash-alt' size='3x' /></button></td>
   )
 }
 

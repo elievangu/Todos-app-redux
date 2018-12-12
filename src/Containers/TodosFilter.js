@@ -5,19 +5,20 @@ import { connect } from 'react-redux';
 import FilterTodos from '../Components/FilterTodos';
 import { filterTodos } from '../Actions/index';
 
+
+const mapStateToProps = (state) => {
+  return {
+      isFiltered: state.isFiltered
+  }
+}
 const mapDispatchToprops = (dispatch) => {
     return {
       handleFilterChange: (e) => {
-          dispatch(filterTodos(e.target.checked))
+          dispatch(filterTodos('true'))
       }
     }
 }
 
-const mapStateToProps = (state) => {
-    return {
-        isFiltered: state
-    }
-}
 
 const TodosFilter = connect(
     mapStateToProps,

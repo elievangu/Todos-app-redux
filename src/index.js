@@ -3,14 +3,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import reducers from './Reducers/reducers';
-import * as serviceWorker from '../src/serviceWorker.js';
 
 //local import
+import reducers from './Reducers/reducers';
+import * as serviceWorker from '../src/serviceWorker.js';
 import '../src/style.css';
 import App from './Components/App';
 
-let store = createStore(reducers);
+let store = createStore(
+  reducers,
+  +  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 const TodoApp = () => {
   return (

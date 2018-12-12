@@ -2,7 +2,7 @@
 import { connect } from 'react-redux';
 
 //local import
-import { toggleTodo } from '../Actions/index';
+import { toggleTodo, deleteTodo } from '../Actions/index';
 import ListItems from '../Components/ListItems';
 
 
@@ -27,8 +27,13 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-      onHandleToggle: (id) => {
+      
+    onHandleToggle: (id) => {
           dispatch(toggleTodo(id))
+      },
+
+      onHandleDelete: (id) => {
+        dispatch(deleteTodo(id))
       }
   }
 };

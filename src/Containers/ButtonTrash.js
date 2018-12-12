@@ -3,15 +3,15 @@ import { connect } from 'react-redux';
 
 //local import
 import TrashButton from '../Components/TrashButton';
-import { trashTodo } from '../Actions/index';
+import { deleteTodo } from '../Actions/index';
 
 const mapDispatchToProps = (dispatch) => {
     return {
-      onHandleTrash: (id) => {
-        dispatch(trashTodo(id))
+      onHandleDelete: (id) => {
+          dispatch(deleteTodo(id))
       }
     }
-}
+};
 
 const ButtonTrash = connect(
     null,

@@ -4,7 +4,7 @@ import React from 'react';
 //Local import
 import VisibleTodosList from '../Containers/VisibleTodosList';
 import TodoInput from '../Containers/TodoInput';
-import TodosFilter from '../Containers/TodosFilter';
+
 
 const App = () => {
   
@@ -18,10 +18,7 @@ const App = () => {
         </thead>
         <VisibleTodosList />
       </table>
-      <div>
-        <TodoInput />
-        <TodosFilter />
-      </div>
+      <TodoInput />
     </div>
   );
 }

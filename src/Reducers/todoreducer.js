@@ -20,9 +20,9 @@ const todos = (state = initialState, action) => {
             todo.id === action.id ? {...todo, completed:!todo.completed} : todo  
           )
         
-        case 'TRASH_TODO':
+        case 'TRASH_TODOS':
           return state.filter(todo => 
-              todo.text !== action.id
+              todo.id !== action.id
           )
         
         default:

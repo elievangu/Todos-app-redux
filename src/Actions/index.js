@@ -15,9 +15,9 @@ export const toggleTodo = (id) => {
     }
 }
 
-export const trashTodo = (id) => {
+export const deleteTodo = (id) => {
     return {
-        type: 'TRASH_TODO',
+        type: 'TRASH_TODOS',
         id
     }
 }
