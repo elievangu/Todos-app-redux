@@ -8,21 +8,23 @@ import { filterTodos } from '../Actions/index';
 
 const mapStateToProps = (state) => {
   return {
-      isFiltered: state.isFiltered
+      isFiltered: state.isFiltered,
   }
 }
-const mapDispatchToprops = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
     return {
-      handleFilterChange: (e) => {
-          dispatch(filterTodos('true'))
+      onHandleFilterChange: (checked) => {
+          dispatch(filterTodos(checked))
+          console.log('hello')
       }
     }
 }
+    
 
 
 const TodosFilter = connect(
     mapStateToProps,
-    mapDispatchToprops
+    mapDispatchToProps
 )(FilterTodos);
 
 export default TodosFilter;

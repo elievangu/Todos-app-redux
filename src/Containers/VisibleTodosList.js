@@ -21,7 +21,8 @@ const getVisibleTodos = (todos, isFiltered) => {
 
 const mapStateToProps = (state) => {
   return {
-    todos: getVisibleTodos(state.todos, state.isFiltered)
+    todos: getVisibleTodos(state.todos, state.isFiltered),
+    isFitered: state.isFiltered
   }
 };
 
@@ -29,12 +30,12 @@ const mapDispatchToProps = (dispatch) => {
   return {
       
     onHandleToggle: (id) => {
-          dispatch(toggleTodo(id))
-      },
+      dispatch(toggleTodo(id))
+    },
 
-      onHandleDelete: (id) => {
-        dispatch(deleteTodo(id))
-      }
+    onHandleDelete: (id) => {
+      dispatch(deleteTodo(id))
+    }
   }
 };
 

@@ -3,13 +3,13 @@ import React from 'react';
 
 //local import
 
-const FilterTodos = ({checked, isFiltered, handleFilterChange}) => {
+const FilterTodos = ({isFiltered, handleFilterChange}) => {
     return (
       <label>
         <input 
         type='checkbox' 
         checked={isFiltered} 
-        onChange={(e) => handleFilterChange(e, checked)} />
+        onChange={handleFilterChange} />
         <span>Show only completed Todos</span>
       </label>
     )

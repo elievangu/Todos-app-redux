@@ -1,4 +1,4 @@
-const filterReducer = (state = false, action) => {
+const filterReducer = (state = true, action) => {
     switch(action.type) {
       case 'FILTER_TODOS':
         return !state;
