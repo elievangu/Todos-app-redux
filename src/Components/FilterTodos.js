@@ -1,5 +1,6 @@
 //npm import
 import React from 'react';
+import PropTypes from 'prop-types';
 
 //local import
 
@@ -13,6 +14,11 @@ const FilterTodos = ({isFiltered, handleFilterChange}) => {
         <span>Show only completed Todos</span>
       </label>
     )
+}
+
+FilterTodos.propTypes = {
+  isFiltered: PropTypes.bool.isRequired,
+  handleFilterChange: PropTypes.func.isRequired
 }
 
 export default FilterTodos;

@@ -1,5 +1,6 @@
 //npm import
 import React from 'react';
+import PropTypes from 'prop-types';
 
 //local import
 import ItemTodo from './ItemTodo';
@@ -33,4 +34,16 @@ const ListItems = ({ todos, onHandleDelete, onHandleToggle }) => {
   )
 }
 
+ListItems.propTypes = {
+  todos: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      text: PropTypes.string.isRequired,
+      completed: PropTypes.bool.isRequired
+    }).isRequired
+  ).isRequired,
+
+  handleDelete: PropTypes.func.isRequired,
+  handleToggle: PropTypes.func.isRequired
+}
 export default ListItems;
